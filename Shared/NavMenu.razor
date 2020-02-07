@@ -1,0 +1,65 @@
+﻿
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="">Nick the Dev</a>
+        <button class="navbar-toggler" @onclick="ToggleNavMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="@NavMenuCssClass navbar-collapse" @onclick="ToggleNavMenu">
+       
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item px-3">
+                    <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                        <span class="oi oi-home" aria-hidden="true"></span> Home
+                    </NavLink>
+                </li>
+                <li class="nav-item px-3">
+                    <NavLink class="nav-link" href="/profile">
+                        <span class="oi oi-home" aria-hidden="true"></span> Profile
+                    </NavLink>
+                </li>
+                <li class="nav-item px-3">
+                    <NavLink class="nav-link" href="/projects">
+                        <span class="oi oi-home" aria-hidden="true"></span> Projects
+                    </NavLink>
+                </li>
+                <li class="nav-item px-3">
+                    <NavLink class="nav-link" href="/dashboard">
+                        <i class="fas fa-dashboard "></i> Dashboard
+                    </NavLink>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="https://hnicolus.github.io">
+                        <i class="fab fa-github"></i> Github
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.linkedin.com/in/nicolas-maluleke-81a698191/">
+                        <i class="fab fa-linkedin"></i> Linkedin
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
+
+
+
+
+
+@code {
+    private bool collapseNavMenu = true;
+
+    private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+}

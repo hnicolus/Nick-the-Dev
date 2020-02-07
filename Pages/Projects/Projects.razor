@@ -1,0 +1,31 @@
+﻿<Bubbles></Bubbles>
+<div class="blog-posts bg-info p-3">
+    <div class="text-center">
+        <h2 class="display-2 text-light my-2">My Latest Projects</h2>
+        <p class="lead text-light">I am constantly releasing new features. Stay up to date with me by subcribing.</p>
+    </div>
+    <div class="container">
+        <div class="row">
+
+            @for (var x = 1; x < 7; ++x)
+            {
+                <div class="col-md-4">
+                    <Project Image="@("dog-"+x+".jpg")"
+                             Title="The HandBook"
+                             Description="The handbook is a cross Platform mobile notes writing application to help authors,
+                             students and artist write down their bright and wonderful
+                             ideas with a more Creativity and organized way,Simply designed to work">
+                    </Project>
+                </div>
+
+            }
+
+
+        </div>
+    </div>
+</div>
+
+<Testimonials></Testimonials>s
+@code {
+
+}
